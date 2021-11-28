@@ -1,0 +1,135 @@
+/* ***** */
+/* VARS */
+/* ***** */
+
+:root {
+  /* Primary */
+  --bg: hsl(225, 100%, 94%);
+  --clr-bright-blue: hsl(245, 75%, 52%);
+  /* Neutral */
+  --clr-very-pale-blue: hsl(225, 100%, 98%);
+  --clr-desat-blue: hsl(224, 23%, 55%);
+  --clr-dark-blue: hsl(223, 47%, 23%);
+  --clr-black: hsl(0, 0%, 0%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  /* Typography */
+  --ff-sans-normal: "Red Hat Display", sans-serif;
+  --fs-900: 3rem;
+  --fs-800: 2.25rem;
+  --fs-700: 1.75rem;
+  --fs-600: 1.5rem;
+  --fs-500: 1.225rem;
+  --fs-400: 1rem;
+  --fs-300: 0.875rem;
+  --fs-200: 0.75rem;
+  /* utilities */
+  --border-rad: 1rem;
+  --line-height: 1.5;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    background: url("/images/pattern-background-mobile.svg") no-repeat;
+  }
+  .card {
+    min-width: 300px;
+  }
+}
+
+@media screen and (min-width: 376px) {
+  body {
+    background: url("/images/pattern-background-desktop.svg") no-repeat;
+  }
+  .card {
+    max-width: 375px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  border-radius: 2rem;
+  background-color: var(--clr-white);
+  overflow: hidden;
+  text-align: center;
+  justify-content: center;
+}
+
+.card-content {
+  padding-inline: 1rem;
+}
+
+.h1-main {
+  font-size: var(--fs-600);
+  font-weight: 700;
+  margin: 1rem;
+}
+
+.p-main {
+  color: var(--clr-desat-blue);
+  margin: 1rem 2rem;
+}
+
+.annual-plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--clr-very-pale-blue);
+  margin: 1rem 0;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.annual-plan::before {
+  content: "";
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  margin: 0;
+  vertical-align: middle;
+  background: url("images/icon-music.svg") no-repeat;
+}
+
+.price > h2 {
+  font-weight: 700;
+}
+.price > p {
+  color: var(--clr-desat-blue);
+}
+
+.btn-pay {
+  background-color: var(--clr-bright-blue);
+  border-radius: 1rem;
+  width: 100%;
+  color: var(--clr-white);
+  font-weight: 900;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.btn-pay:hover,
+.btn-pay:active {
+  opacity: 0.7;
+}
+
+.btn-cancel {
+  background: none;
+  font-weight: 700;
+  color: var(--clr-desat-blue);
+  margin: 1rem 0;
+  cursor: pointer;
+}
