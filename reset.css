@@ -51,7 +51,7 @@ body {
   font-size: var(--fs-400);
   font-weight: 500;
   color: var(--clr-black);
-  background-color: var(--bg);
+  background-color: var(--clr-very-pale-blue);
   line-height: var(--line-height);
   min-height: 100vh;
 }
