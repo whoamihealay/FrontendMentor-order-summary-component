@@ -13,6 +13,9 @@
   --clr-black: hsl(0, 0%, 0%);
   --clr-white: hsl(0, 0%, 100%);
 
+  /* Backgrounds */
+  --bg: hsl(225, 100%, 94%);
+
   /* Typography */
   --ff-sans-normal: "Red Hat Display", sans-serif;
   --fs-900: 3rem;
@@ -36,21 +39,19 @@
   color: hsl(228, 45%, 44%);
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 30em) {
   body {
     background: url("./images/pattern-background-mobile.svg") no-repeat;
+    background-size: contain;
   }
   .card {
-    min-width: 300px;
+    min-width: 18.75rem;
   }
 }
 
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 30em) {
   body {
     background: url("./images/pattern-background-desktop.svg") repeat-x;
-  }
-  .card {
-    max-width: 375px;
   }
 }
 
@@ -67,21 +68,22 @@
   overflow: hidden;
   text-align: center;
   justify-content: center;
+  max-width: 23.5rem;
 }
 
 .card-content {
-  padding-inline: 1rem;
+  padding-inline: 1em;
 }
 
 .h1-main {
   font-size: var(--fs-600);
   font-weight: 700;
-  margin: 1rem;
+  margin: 1em;
 }
 
 .p-main {
   color: var(--clr-desat-blue);
-  margin: 1rem 2rem;
+  margin: 1em 2em;
 }
 
 .annual-plan {
@@ -89,9 +91,9 @@
   justify-content: space-between;
   align-items: center;
   background-color: var(--clr-very-pale-blue);
-  margin: 1rem 0;
+  margin: 1em 0;
   border-radius: 1rem;
-  padding: 1rem;
+  padding: 1em;
 }
 
 .annual-plan::before {
@@ -117,7 +119,7 @@
   width: 100%;
   color: var(--clr-white);
   font-weight: 900;
-  padding: 1rem;
+  padding: 1em;
   cursor: pointer;
 }
 
@@ -130,6 +132,6 @@
   background: none;
   font-weight: 700;
   color: var(--clr-desat-blue);
-  margin: 1rem 0;
+  margin: 1em 0;
   cursor: pointer;
 }
