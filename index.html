@@ -19,39 +19,53 @@
       rel="stylesheet"
     />
   </head>
-  <body class="container">
-    <main class="card">
-      <div>
+  <body>
+    <main class="main">
+      <section class="card">
         <img
-          class="img-hero"
           src="images/illustration-hero.svg"
-          alt="illustration-hero"
+          alt="Character with headphones and mobile phone dancing to music"
         />
-        <article class="card-content">
-          <h1 class="h1-main">Order Summary</h1>
-          <p class="p-main">
+        <div class="primary-content container">
+          <h1 class="card__title">Order Summary</h1>
+          <p class="card__content">
             You can now listen to millions of songs, audiobooks, and podcasts on
             any device anywhere you like!
           </p>
-          <div class="annual-plan">
-            <div class="price">
-              <h2>Annual Plan</h2>
+          <div class="card__annual-plan">
+            <img src="images/icon-music.svg" alt="eighth note" />
+            <div id="plan">
+              <h2><b>Annual Plan</b></h2>
               <p>$59.99/year</p>
             </div>
-            <a href="#">Change</a>
+            <a href="#" onclick="toggle()">Change</a>
           </div>
-          <button class="btn-pay">Proceed to Payment</button>
-          <button class="btn-cancel">Cancel Order</button>
-        </article>
-      </div>
+          <button id="pay" class="btn__pay" onclick="pay()">
+            Proceed to Payment
+          </button>
+          <button id="cancelBtn" class="btn__cancel" onclick="cancel()">
+            Cancel Order
+          </button>
+        </div>
+      </section>
+      <script src="index.js"></script>
     </main>
     <footer class="attribution">
       Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Frontend Mentor
       </a>
       . Coded by
-      <a href="#">Andrew</a>
+      <a
+        href="https://www.frontendmentor.io/profile/whoamihealay"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Andrew</a
+      >
       .
     </footer>
   </body>

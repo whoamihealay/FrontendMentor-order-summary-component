@@ -31,14 +31,6 @@
   --line-height: 1.5;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
-
 @media screen and (max-width: 30em) {
   body {
     background: url("./images/pattern-background-mobile.svg") no-repeat;
@@ -55,65 +47,58 @@
   }
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.main {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
 }
+
+/* Card */
 
 .card {
-  border-radius: 2rem;
   background-color: var(--clr-white);
+  max-width: 23.5rem;
+  border-radius: 2rem;
   overflow: hidden;
   text-align: center;
-  justify-content: center;
-  max-width: 23.5rem;
 }
 
-.card-content {
-  padding-inline: 1em;
+.primary-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1em 0;
 }
 
-.h1-main {
+.card__title {
   font-size: var(--fs-600);
   font-weight: 700;
-  margin: 1em;
 }
 
-.p-main {
+.card__content {
   color: var(--clr-desat-blue);
-  margin: 1em 2em;
 }
 
-.annual-plan {
+.card__annual-plan {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 1rem;
   background-color: var(--clr-very-pale-blue);
-  margin: 1em 0;
   border-radius: 1rem;
   padding: 1em;
 }
 
-.annual-plan::before {
-  content: "";
-  display: inline-block;
-  width: 48px;
-  height: 48px;
-  margin: 0;
-  vertical-align: middle;
-  background: url("images/icon-music.svg") no-repeat;
-}
-
-.price > h2 {
-  font-weight: 700;
-}
-.price > p {
+.card__annual-plan p {
   color: var(--clr-desat-blue);
 }
 
-.btn-pay {
+.card__annual-plan a {
+  margin-left: auto;
+}
+
+/* buttons */
+
+.btn__pay {
   background-color: var(--clr-bright-blue);
   border-radius: 1rem;
   width: 100%;
@@ -123,15 +108,28 @@
   cursor: pointer;
 }
 
-.btn-pay:hover,
-.btn-pay:active {
-  opacity: 0.7;
+.btn__pay:hover,
+.btn__pay:active {
+  opacity: 0.9;
 }
 
-.btn-cancel {
+.btn__cancel {
   background: none;
   font-weight: 700;
   color: var(--clr-desat-blue);
-  margin: 1em 0;
   cursor: pointer;
+}
+
+/* Footer */
+
+.attribution {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
